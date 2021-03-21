@@ -21,7 +21,7 @@ const RandomString: React.FC = () => {
 
     return (
         <div>
-            <p>{randomString}</p>
+            <a href="#">{randomString.join('')}</a>
         </div>
     );
 }
