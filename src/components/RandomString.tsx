@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const RandomString: React.FC = () => {
+const RandomString = (props: any) => {
 
     const [randomString, setRandomString] = useState(btoa(Math.random().toString(36).slice(-6)).split(''));
     useEffect(() => {
@@ -21,7 +21,7 @@ const RandomString: React.FC = () => {
 
     return (
         <div>
-            <a href="#">{randomString.join('')}</a>
+            <span onClick={props.onClick}>{randomString.join('')}</span>
         </div>
     );
 }
