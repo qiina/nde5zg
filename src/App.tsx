@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
-import P5Wrapper from './components/P5Wrapper'
+import Canvas from './components/Canvas'
+import DisplayDate from './components/DisplayDate';
+import RandomString from './components/RandomString';
+import sketch1 from './components/sketches/01sketch/sketch';
 
-function App() {
+const App = () => {
 
   const randomString: string  = btoa(Math.random().toString(36).slice(-7));
 
   return (
     <div className="App">
-      <P5Wrapper/>
-      <p>{randomString}</p>
-      <a href="">init</a>
+      <p></p>
+      <Canvas sketch={sketch1}/>
+      <RandomString/>
+      
     </div>
   );
 }

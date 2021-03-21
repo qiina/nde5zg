@@ -2,15 +2,15 @@ import React, { useEffect } from 'react';
 import p5 from 'p5';
 import sk from './sketches/01sketch/sketch';
 
-const P5Wrapper: React.FC = props => {
+const Canvas = (props: any) => {
 
     useEffect(() => {
-        new p5(sk)
-    },[]);
+        new p5(props.sketch)
+    },[props.sketch]);
 
     return (
         <div id="sketch"/>
     );
 }
 
-export default P5Wrapper;
+export default Canvas;

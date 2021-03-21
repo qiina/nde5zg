@@ -1,5 +1,5 @@
 import p5 from 'p5';
-import u from './sketchUtils';
+import {Snow, Ripple} from './materials'
 
 const sk = (p: p5): void => {
     //const canvasWidth = p.windowWidth -30;
@@ -23,10 +23,11 @@ const sk = (p: p5): void => {
         p.createCanvas(canvasWidth, canvasHeight).parent('sketch');
         p.frameRate(25);
         initSnow();
-
+        
         p.background(0);
         p.fill(255);
         p.noSmooth();
+        p.rectMode(p.CENTER);
     }
 
     p.draw = (): void => {
@@ -85,9 +86,9 @@ const sk = (p: p5): void => {
 
     const drawRipple = (): void => {
         p.noFill();
-        p.stroke(255);
+        p.stroke(150);
         ripples.forEach((ripple) => {
-            p.circle(ripple.x, ripple.y, ripple.diameter);
+            customDrawCircle(ripple.x, ripple.y, ripple.diameter);
         })
     }
 
@@ -97,20 +98,14 @@ const sk = (p: p5): void => {
        })
     }
 
-    // define materials
-    interface Figures {
-        x: number,
-        y: number
+    const customDrawCircle = (inX: number, inY: number, inDiameter: number): void => {
+        for(let i=0; i < p.TWO_PI; i+=(p.PI/50)) {
+            let x = inX + inDiameter * p.sin(i);
+            let y = inY + inDiameter * p.cos(i);
+            p.rect(x, y, 1, 1);
+        }
     }
 
-    interface Snow extends Figures {
-        scale: number,
-        speed: number
-    };
-
-    interface Ripple extends Figures {
-        diameter: number
-    }
 }
 
 export default sk;
