@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import p5 from 'p5';
-import sk from './sketches/01sketch/sketch'
+import sk from './sketches/01sketch/sketch';
 
-const DrawSketch: React.FC = () => {
+const P5Wrapper: React.FC = props => {
 
     useEffect(() => {
         new p5(sk)
@@ -13,4 +13,4 @@ const DrawSketch: React.FC = () => {
     );
 }
 
-export default DrawSketch;
+export default P5Wrapper;
