@@ -1,13 +1,13 @@
 import '../../App.css';
 import Canvas from '../Canvas';
 import RandomString from '../RandomString';
-import sketch2 from '../sketches/02sketch/sketch';
+import sketch3 from '../sketches/04sketch/sketch';
 
-const Second = () => (
+const Third = () => (
         <>
-        <Canvas sketch={sketch2}/>
+        <Canvas sketch={sketch3}/>
         <RandomString/>
         </>
 );
 
-export default Second;
+export default Third;

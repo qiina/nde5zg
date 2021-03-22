@@ -9,8 +9,3 @@
   align-items: center;
   color: black;
 }
-
-a:link, a:visited, a:hover, a:active {
-  color: #000;
-  text-decoration: none;
-}

@@ -3,7 +3,7 @@ import p5 from 'p5';
 const sk = (p: p5): void => {
 
     const scale: number = 16;
-    const canvasWidth: number = Math.floor(p.windowWidth / scale) * scale - 32;
+    const canvasWidth: number = Math.floor(p.windowWidth / 4) * 4 - 32;
     const canvasHeight: number = 400;
     let palette: string[];
     //const url: string = 'https://coolors.co/fec5bb-fcd5ce-fae1dd-f8edeb-e8e8e4-d8e2dc-ece4db-ffe5d9-ffd7ba-fec89a';
@@ -14,7 +14,6 @@ const sk = (p: p5): void => {
         p.createCanvas(canvasWidth, canvasHeight).parent('sketch');
         p.frameRate(5);
         
-        p.background(0);
         p.fill(255);
         p.noSmooth();
         p.noStroke();

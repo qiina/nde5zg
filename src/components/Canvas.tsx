@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import _p5 from 'p5';
+import styled from 'styled-components';
 
 let p5Instance: _p5;
 
 const Canvas = (props: any) => {
+
+    const Div = styled.div`
+        margin: 16px 0 5px;
+    `;
+
     const [p5, setP5] = useState(0);
     const wrapper = React.createRef();
   
@@ -13,7 +19,9 @@ const Canvas = (props: any) => {
     },[props.sketch]);
 
     return (
-        <div id="sketch"/>
+        <Div>
+            <div id="sketch"/>
+        </Div>
     );
 }
 

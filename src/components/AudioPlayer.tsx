@@ -1,5 +1,3 @@
-import useAudio from './utils/useAudio';
-
 const audioUrl = "./Gymnopedie.mp3";
 
 const AudioPlayer = () => {
@@ -13,7 +11,7 @@ const AudioPlayer = () => {
     <>
 
       <span onClick={handleClick}>
-        +-+-+
+          ~
       </span>
     </>
   );

@@ -28,6 +28,7 @@ const sk = (p: p5): void => {
 
     p.draw = (): void => {
         p.background(255);
+        p.orbitControl();
         p.translate(0, 0, 0);
         // 濃紺のアンビエントライト
         p.ambientLight(0, 50, 255);
