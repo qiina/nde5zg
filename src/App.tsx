@@ -14,7 +14,6 @@ const App = () => (
         <Route path="/second" component={Second} />
         <Route path="/third" component={Third} />
       </Switch>
-      <Navbar></Navbar>
     </BrowserRouter>
   </div>
 );
