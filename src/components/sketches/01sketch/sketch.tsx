@@ -5,7 +5,7 @@ const sk = (p: p5): void => {
 
     // 4の倍数にする
     const scale: number = 4;
-    const canvasWidth: number = Math.floor(p.windowWidth / scale) * scale;
+    const canvasWidth: number = p.windowWidth;
     const canvasHeight: number = 400;
 
     // snowデータ関連
